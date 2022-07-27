@@ -27,11 +27,11 @@ fetchData(`${API}/people`, function(error1,data1){
 })
 
 fetchData(`${API}/planets`, function(error2,data2){
-    if (error1) return console.error(error2);
+    if (error2) return console.error(error2);
    console.log(data2);
 })
 
 fetchData(`${API}/starships`, function(error3,data3){
-    if (error1) return console.error(error3);
+    if (error3) return console.error(error3);
    console.log(data3);
 })
