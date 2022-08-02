@@ -1,0 +1,99 @@
+<!--Construir un programa que pida por pantalla 3 números y luegodiga cuál es el mayor, el del medio y el menor de los números ingresados. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1">
+</head>
+<body>
+    <h1>ORDENACIÓN DE TRES NÚMEROS - Stalin Guzmán</h1>
+    <form>
+        <label>Ingrese el primer número:</label>
+        <input type="number" id="numer1"<br><br>
+
+        <label>Ingrese el segundo número:</label>
+        <input type="number" id="numer2"<br><br>
+
+        <label>Ingrese el tercer número:</label>
+        <input type="number" id="numer3"<br><br>
+
+        <button type="button" onclick="calcular()">Calcular</button>
+
+          <!--Script en JavaScript -->
+    <script>
+        function calcular(){
+            var numer1 = parseInt(document.getElementById('numer1').value);
+            var numer2 = parseInt(document.getElementById('numer2').value);
+            var numer3 = parseInt(document.getElementById('numer3').value);
+        
+            var mayor = Math.max(numer1, numer2, numer3);
+            var menor = Math.min(numer1, numer2, numer3);
+            var medio = (numer1 + numer2 + numer3) / 3;
+                alert("El mayor es : "+mayor+" , El menor es : "+menor+" El medio es : "+medio);
+        }
+    </script>
+<!--Construir un programa que pida un año y luego determine si el año es bisiesto o no. Tenga en cuenta que los años bisiestos son los números múltiplos de 4, pero que no son múltiplos de 100 y si son múltiplos de 100 y múltiplos de 400 sí son bisiestos. -->
+    </form>
+    <h1>AÑO BICIESTO</h1>
+    <script>
+        let anio;
+        anio = prompt("Ingrese el año");
+        anio = parseInt(anio);
+        if((anio%4==0) && (anio%100 !=0 || anio%400==0)){
+            document.write("El año es bisiesto");
+        }else{
+            document.write("El año no es bisiesto");
+        }
+    </script>
+    <form>
+
+    </form>
+    
+<h1>DESCUENTOS</h1>
+<form>
+    <p>&nbsp;</p>
+<p>Monto inicial 
+  <input type="text" id="monto_inicial" name="monto_inicial" style=" width: 100px;">
+</p>
+<p>% de descuento: 
+   <input type="text" id="descuento" name="descuento" style=" width: 100px;">
+</p>
+<p>
+  
+  Importe Descontado 
+  <input type="text" id="importe_descontado" name="importe_descontado" style=" width: 100px;" readonly="readonly">
+</p>
+<p>Total 
+  
+  <input type="text" id="total" name="total" style=" width: 100px;" readonly="readonly">
+</p>
+
+     <a href="javascript:calcular();"><span style=" float: left; margin-right: 10px; margin-bottom: 5px; font-size:20px; background-color: #CCC; color:#000;" value="" type="submit" class="boton" id="btn_calcula" name="btn_calcula"  >Calcular</span></a>
+
+    <script>
+
+        function calcular(){
+        var monto_ini =0;
+        var desc =0;
+        var imp_desc = 0;
+        var total =0;
+        
+        monto_ini = document.getElementById('monto_inicial').value;
+        desc = document.getElementById('descuento').value;
+        
+        imp_desc = (monto_ini * desc)/100;
+        document.getElementById('importe_descontado').value=imp_desc;
+        total = monto_ini - imp_desc
+        document.getElementById('total').value=total;
+        console.log(total);
+        }
+        
+    </script>
+
+</form>
+
+</body>
+
+</html>
+
