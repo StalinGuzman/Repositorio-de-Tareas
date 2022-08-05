@@ -7,9 +7,12 @@ fetch(`${url}/${id}`)
 .then(res => res.json())
 .then(data => {
     const name = document.createElement('p')
-    name.innerHTML = data.name
-    const email = document.createElement('p')
-    email.innerHTML = data.email
-    aplicacion.appendChild(name)
-    aplicacion.appendChild(email)
-});
+     name.innerHTML = data.name
+     const email = document.createElement('p')
+     email.innerHTML = data.email
+     const username = document.createElement('p')
+     username.innerHTML = data.username
+     aplicacion.appendChild(name)
+     aplicacion.appendChild(email)
+     aplicacion.appendChild(username)
+ });
